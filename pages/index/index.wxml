@@ -9,5 +9,7 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+    <navigator url='https://m.hujiang.com/en/?source=pc'>沪江英语</navigator>
+    <text>https://m.hujiang.com/en/?source=pc</text>
   </view>
 </view>
