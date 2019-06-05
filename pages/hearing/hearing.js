@@ -1,18 +1,35 @@
 // pages/hearing/hearing.js
+const { request } = require('../../utils/request.js')
+const { hearingTop } = require('../../utils/api.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    topData: [],
+    topList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const params = {
+      ...hearingTop,
+      data: {
+        categoryId: 11,
+        pageSize: 4,
+        pageIndex: 1,
+        withTotalCount: false
+      }
+    }
+    request(params, data => {
+      this.setData({
+        topData: data.items[0],
+        topList: data.items.slice(1)
+      })
+    })
   },
 
   /**

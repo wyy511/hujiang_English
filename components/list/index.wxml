@@ -1,0 +1,9 @@
+<view class="hu-list">
+  <block wx:for="{{list}}" wx:for-index="{{index}}" wx:for-item="item" wx:key="{{index}}">
+    <view>
+      <image class="img" src="{{item.articleImage}}" />
+      <text>{{item.title}}</text>
+    </view>
+    
+  </block>
+</view>

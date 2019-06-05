@@ -2,7 +2,6 @@
 //获取应用实例
 const app = getApp()
 var API = require('../../mock/api.js')
-console.log(API)
 
 Page({
   data: {

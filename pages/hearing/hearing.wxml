@@ -1,2 +1,5 @@
 <!--pages/hearing/hearing.wxml-->
-<text>pages/hearing/hearing.wxml</text>
+<view>
+  <Toppic src="{{topData.articleImage}}" title="{{topData.title}}"></Toppic>
+  <List list="{{topList}}"></List>
+</view>
