@@ -1,0 +1,5 @@
+<view class="hu_img">
+  <text class="title">{{title}}</text>
+  <image class="img" mode="scaleToFill" src="{{src}}"/>
+  <text class="title summary">{{summary}}</text>
+</view>

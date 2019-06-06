@@ -1,8 +1,25 @@
-.hu-list {
+.hu_list {
   width: 100%;
-  margin-top: 40rpx;
+  padding: 40rpx 20rpx;
+}
+.hu_list-content {
+  height: 200rpx;
+  position: relative;
+  margin-bottom: 20rpx;
 }
 .img {
   width: 200rpx;
   height: 200rpx;
+}
+.content {
+  position: absolute;
+  left: 220rpx;
+  right: 20rpx;
+  top: 0;
+  font-size: 32rpx;
+}
+.txt:last-child {
+  display: block;
+  position: absolute;
+  bottom: -100rpx;
 }

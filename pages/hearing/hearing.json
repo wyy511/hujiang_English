@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "Toppic": "/components/toppic/index",
-    "List": "/components/list/index"
+    "List": "/components/list/index",
+    "Conpic": "/components/conpic/index"
   }
 }

@@ -1,6 +1,6 @@
 // pages/hearing/hearing.js
 const { request } = require('../../utils/request.js')
-const { hearingTop } = require('../../utils/api.js')
+const { hearingTop, hearingMidScroll } = require('../../utils/api.js')
 Page({
 
   /**
@@ -8,13 +8,21 @@ Page({
    */
   data: {
     topData: [],
-    topList: []
+    topList: [],
+    midData: [],
+    midList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getTopContent(this)
+    this.getMidContent(this)
+    this.getMidListContent(this)
+  },
+
+  getTopContent: (that) => {
     const params = {
       ...hearingTop,
       data: {
@@ -25,9 +33,45 @@ Page({
       }
     }
     request(params, data => {
-      this.setData({
+      that.setData({
         topData: data.items[0],
         topList: data.items.slice(1)
+      })
+    })
+  },
+
+  getMidContent: (that) => {
+    const params = {
+      ...hearingMidScroll,
+      data: {
+        adType: 3,
+        webTouchCategory: 11,
+        langs: 'en',
+        isBest: false,
+        pageIndex: 1,
+        pageSize: 1
+      }
+    }
+    request(params, data => {
+      that.setData({
+        midData: data.items[0]
+      })
+    })
+  },
+
+  getMidListContent: (that) => {
+    const params = {
+      ...hearingTop,
+      data: {
+        categoryId: 11,
+        pageSize: 4,
+        pageIndex: 3,
+        withTotalCount: false
+      }
+    }
+    request(params, data => {
+      that.setData({
+        midList: data.items
       })
     })
   },
@@ -43,7 +87,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

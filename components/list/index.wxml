@@ -1,8 +1,11 @@
-<view class="hu-list">
+<view class="hu_list">
   <block wx:for="{{list}}" wx:for-index="{{index}}" wx:for-item="item" wx:key="{{index}}">
-    <view>
+    <view class="hu_list-content">
       <image class="img" src="{{item.articleImage}}" />
-      <text>{{item.title}}</text>
+      <view class="content">
+        <text class="txt">{{item.title}}</text>
+        <text class="txt">阅读量：{{item.totalView}}</text>
+      </view>
     </view>
     
   </block>

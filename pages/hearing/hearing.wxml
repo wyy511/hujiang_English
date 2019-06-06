@@ -2,4 +2,6 @@
 <view>
   <Toppic src="{{topData.articleImage}}" title="{{topData.title}}"></Toppic>
   <List list="{{topList}}"></List>
+  <Conpic src="{{midData.image}}" title="{{midData.title}}" summary="{{midData.summary}}"></Conpic>
+  <List list="{{midList}}"></List>
 </view>
