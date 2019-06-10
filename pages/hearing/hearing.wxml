@@ -1,7 +1,10 @@
 <!--pages/hearing/hearing.wxml-->
 <view>
-  <Toppic src="{{topData.articleImage}}" title="{{topData.title}}"></Toppic>
-  <List list="{{topList}}"></List>
-  <Conpic src="{{midData.image}}" title="{{midData.title}}" summary="{{midData.summary}}"></Conpic>
-  <List list="{{midList}}"></List>
+  <scroll-view scroll-y="true" bindscrolltolower="lower" bindscroll="scroll"  style="height: {{scroll_height}}rpx">
+    <Toppic src="{{topData.articleImage}}" title="{{topData.title}}"></Toppic>
+    <List list="{{topList}}"></List>
+    <Conpic src="{{midData.image}}" title="{{midData.title}}" summary="{{midData.summary}}"></Conpic>
+    <List list="{{midList}}"></List>
+    <Isloading title="{{isloading}}" wx:if="{{isRequest}}"></Isloading>
+  </scroll-view>
 </view>

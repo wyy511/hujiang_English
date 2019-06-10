@@ -1,0 +1,5 @@
+.hu_isloading {
+  text-align: center;
+  font-size: 40rpx;
+  color: #acacac;
+}

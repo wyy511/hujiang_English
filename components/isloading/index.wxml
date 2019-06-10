@@ -1,0 +1,3 @@
+<view class="hu_isloading">
+  <text class="title">{{title}}</text>
+</view>

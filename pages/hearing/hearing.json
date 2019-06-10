@@ -2,6 +2,7 @@
   "usingComponents": {
     "Toppic": "/components/toppic/index",
     "List": "/components/list/index",
-    "Conpic": "/components/conpic/index"
+    "Conpic": "/components/conpic/index",
+    "Isloading": "/components/isloading/index"
   }
 }
